@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+html,body,h1,h2,h3,h4,h5,h6,p,input,select,div,strong,span,p,table,td,tr,th,thead,tfoot,a,ol,ul,li,b,button{      
+    font-family: 'Droid Arabic Kufi', sans-serif !important;
+}
+
+.md-btn {
+    font: 500 14px/31px 'Droid Arabic Kufi',sans-serif !important;
+}
+
+#sidebar_main .sidebar_main_header{
+	background-image: none !important;
+	background: #d9d9d9 !important;
+}
+
+.nt-alert-message{
+	padding-bottom: 0px !important;
+}
+
+.preview-image,#preview-image{
+	width: 100% !important;
+}
