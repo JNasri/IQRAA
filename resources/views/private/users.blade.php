@@ -9,7 +9,7 @@
 <div class="alert alert-success">
 </div>
 @endif
-<h4>المستخدمين المسجلين بشكل طبيعي</h4>
+<h4>جميع المستخدمين</h4>
 <table class="table" style="width:100%;">
 
   <thead>
@@ -75,7 +75,7 @@
 
     @foreach ($users_admin as $n)
     <tr>
-      <td style="font-size: 14px">{{ $n->id }}</td>
+      <td style="font-size: 14px">{{ $n->user_id }}</td>
 
       <td style="font-size: 14px">{{ $n->name }}</td>
       <td style="font-size: 14px">{{ $n->selectedBooks }}</td>

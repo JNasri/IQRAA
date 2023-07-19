@@ -193,16 +193,36 @@ class PrivateController extends Controller
     public function addUser(Request $request)
     {
 
+        // TESTING INPUTS AFTER SUBMIT
+        // echo "<pre>";
+        // print_r($request->all());
+        // die;
+
         $request->validate([
             'name' => 'required|unique:users_admin',
             'password' => 'required|min:6',
         ]);
 
-        // Save the username and password to the users_admin table
-        $registeredUser = new UsersAdmin();
+        // create a new user in the users table (with no email)
+        $registeredUser = new User();
         $registeredUser->name = $request->input('name');
         $registeredUser->password = Hash::make($request->input('password'));
         $registeredUser->save();
+
+        // Also, save the registered user ID to the userAdmin table
+
+        // Get the user's ID
+        $userId = $registeredUser->id;
+        // create user and save info
+        $adminUser = new UsersAdmin();
+        $adminUser->user_id = $userId;
+        $adminUser->name = $request->input('name');
+        // get the selected books and make it a string with (,) in between
+        $selectedBooks = $request->input('books');
+        $booksString = implode(', ', $selectedBooks);
+        $adminUser->selectedBooks = $booksString;
+
+        $adminUser->save();
 
         // Flash success message
         session()->flash('success', 'Registration successful!');

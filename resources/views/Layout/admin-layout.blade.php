@@ -25,6 +25,7 @@
     <meta name="twitter:image" content="" />
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
+    
 
     <link href="https://fonts.googleapis.com/css?family=Cairo:300,400,700&display=swap&subset=arabic" rel="stylesheet">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
